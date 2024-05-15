@@ -1,3 +1,13 @@
+# Dockerized PXE with Rocky Linux 8
+
+This is a fork of https://github.com/ferrarimarco/docker-pxe that serves rocky linux 8 image.
+
+Run it with: `make run`
+
+If you want to test it, you can use an empty VM in VirtualBox with bridged network.
+
+You should change the ip of the server in Dockerfile and tftpboot/pxelinux.cfg/additional_menu_entries.
+
 # Dockerized PXE
 
 A Docker image serving as a standalone [PXE](https://en.wikipedia.org/wiki/Preboot_Execution_Environment) (running dnsmasq). This server can be placed in an existing network infrastructure with an already configured DHCP server or in a network without any DHCP server.

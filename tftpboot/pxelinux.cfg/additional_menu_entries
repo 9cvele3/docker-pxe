@@ -1,3 +1,7 @@
 LABEL memtest86
   MENU LABEL Memtest86+ 2nd entry
   KERNEL /memtest/memtest86+
+LABEL rocky8
+  KERNEL /rocky8/images/pxeboot/vmlinuz
+  APPEND initrd=/rocky8/images/pxeboot/initrd.img inst.repo=ftp://192.168.200.221/pub/pxe/rocky8
+

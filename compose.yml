@@ -1,0 +1,20 @@
+---
+version: "2"
+
+services:
+  docker-pxe:
+    image: docker-pxe
+    restart: unless-stopped
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./rocky8:/var/lib/tftpboot/rocky8
+
+  ftp:
+    image: metabrainz/docker-anon-ftp
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+        - ./rocky8:/var/ftp/pub/pxe/rocky8
+
